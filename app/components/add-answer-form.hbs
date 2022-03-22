@@ -1,0 +1,15 @@
+<div class="row form-group">
+  <div class="col-sm-4">
+    <label for="description">Your Answer</label>
+    <Input
+      class="form-control"
+      @value={{this.description}} />
+  </div>
+  <div class="col-sm-4">
+    <BsButton
+      class="btn btn-secondary"
+      @type="submit"
+      @defaultText="Post Your Answer"
+      {{on "click" this.addAnswer}} />
+  </div>
+</div>

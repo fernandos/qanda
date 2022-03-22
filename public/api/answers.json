@@ -1,0 +1,28 @@
+{
+  "answers": [
+    {
+      "id": "1",
+      "questionId": "1",
+      "description": "This is like that",
+      "createdAt": "2022-03-22T13:00:00.010+02:00"
+    },
+    {
+      "id": "2",
+      "questionId": "2",
+      "description": "In my opinion is like that",
+      "createdAt": "2022-03-22T13:00:00.010+02:00"
+    },
+    {
+      "id": "3",
+      "questionId": "3",
+      "description": "Check this link out",
+      "createdAt": "2022-03-22T13:00:00.010+02:00"
+    },
+    {
+      "id": "4",
+      "questionId": "3",
+      "description": "bla bla bla",
+      "createdAt": "2022-03-22T13:00:00.010+02:00"
+    }
+  ]
+}

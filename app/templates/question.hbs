@@ -1,0 +1,4 @@
+{{page-title "Question"}}
+<h4>Question {{@model.id}}</h4>
+<QuestionDetail @questionId={{@model.id}} @answers={{@model.answers}} />
+<AddAnswerForm @questionId={{@model.id}} @addAnswer={{this.addAnswer}} />

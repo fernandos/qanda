@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'q',
+    modulePrefix: 'qanda',
     environment,
     rootURL: '/',
     locationType: 'history',

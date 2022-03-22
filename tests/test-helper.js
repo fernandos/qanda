@@ -1,5 +1,5 @@
-import Application from 'q/app';
-import config from 'q/config/environment';
+import Application from 'qanda/app';
+import config from 'qanda/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';

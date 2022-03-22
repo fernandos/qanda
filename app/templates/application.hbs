@@ -1,7 +1,19 @@
-{{page-title "Q"}}
+{{page-title "Qanda"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="container-sm">
+  <BsNav
+  @type="dark"
+  @justified={{false}}
+  @stacked={{false}}
+  @fill={{true}} as |nav|>
+    <nav.item>
+      <nav.link-to @route="index">Home</nav.link-to>
+    </nav.item>
+    <nav.item>
+      <nav.link-to @route="questions">Questions</nav.link-to>
+    </nav.item>
+  </BsNav>
+  <h1>Q&A</h1>
 
-{{outlet}}
+  {{outlet}}
+</div>

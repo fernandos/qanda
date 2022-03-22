@@ -1,0 +1,5 @@
+<BsForm @formLayout="vertical" @label="Ask Question" @onSubmit={{this.addQuestion}} as |form|>
+  <form.element @controlType="text" @label="Title" @placeholder="Title" @property="title" />
+  <form.element @controlType="textarea" @label="Description" @property="description" />
+  <form.submitButton>Ask Question</form.submitButton>
+</BsForm>
