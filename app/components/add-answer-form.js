@@ -6,6 +6,7 @@ import { tracked } from '@glimmer/tracking';
 export default class AddAnswerFormComponent extends Component {
   @service store;
   @tracked invalidForm = false;
+  @tracked description = '';
   get questionId() {
     return this.args.questionId;
   }
@@ -22,6 +23,7 @@ export default class AddAnswerFormComponent extends Component {
         createdAt: new Date(),
       });
       this.invalidForm = false;
+      this.description = '';
     } else {
       this.invalidForm = true;
     }

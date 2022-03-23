@@ -6,13 +6,17 @@ import { tracked } from '@glimmer/tracking';
 
 export default class AddQuestionFormComponent extends Component {
   @service store;
-  @tracked invalidForm = false;
+  @tracked invalidTitle = false;
+  @tracked invalidDescription = false;
+  @tracked title = '';
+  @tracked description = '';
   @action
-  addQuestion(form) {
-    let { title, description } = form;
-    let isValid = !isEmpty(title) && !isEmpty(description);
+  addQuestion() {
+    let { title, description } = this;
+    let isValidTitle = !isEmpty(title);
+    let isValidDescription = !isEmpty(description);
 
-    if (isValid) {
+    if (isValidTitle && isValidDescription) {
       this.args.addQuestion({
         id: Math.random(36).toString().substring(2, 9),
         title,
@@ -20,9 +24,13 @@ export default class AddQuestionFormComponent extends Component {
         answersCount: 0,
         createdAt: new Date(),
       });
-      this.invalidForm = false;
+      this.invalidTitle = false;
+      this.invalidDescription = false;
+      this.title = '';
+      this.description = '';
     } else {
-      this.invalidForm = true;
+      this.invalidTitle = !isValidTitle;
+      this.invalidDescription = !isValidDescription;
     }
   }
 }

@@ -1,19 +1,41 @@
 {{page-title "Qanda"}}
-
-<div class="container-sm">
-  <BsNav
-  @type="dark"
-  @justified={{false}}
-  @stacked={{false}}
-  @fill={{true}} as |nav|>
-    <nav.item>
-      <nav.link-to @route="index">Home</nav.link-to>
-    </nav.item>
-    <nav.item>
-      <nav.link-to @route="questions">Questions</nav.link-to>
-    </nav.item>
-  </BsNav>
-  <h1>Q&A</h1>
-
-  {{outlet}}
+<header class="navbar navbar-expand-md navbar-dark">
+  <BsNavbar
+  class="container-xxl flex-wrap flex-md-nowrap"
+    @type="dark"
+    @backgroundColor="dark"
+    as |navbar|>
+    <LinkTo @route="index" class="navbar-brand">Q&A</LinkTo>
+    <navbar.toggle/>
+      <navbar.content>
+        <navbar.nav as |nav|>
+          <nav.item>
+            <nav.link-to @route="index">Home</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="questions">Questions</nav.link-to>
+          </nav.item>
+        </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+</header>
+<div class="container-xxl my-md-4">
+  <div class="row">
+    <main class="col-12">
+      <h1>Ask & answer questions</h1>
+      <p>In this place you can ask and answer questions about whatever you want. Others can respond to these Q&As directly. You can ask or answer questions from search on any device.</p>
+      {{outlet}}
+    </main>
+  </div>
 </div>
+<footer class="footer">
+  <div class="container-xxl">
+    <div class="d-flex flex-wrap justify-content-between align-items-center p-0 m-0 border-top">
+      <p class="col-md-4 mb-0 text-muted">© 2022 Ember Challenge</p>
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="px-4 nav-item"><LinkTo class="nav-link p-0 text-muted" @route="index">Home</LinkTo></li>
+        <li class="px-4 nav-item"><LinkTo class="nav-link p-0 text-muted" @route="questions">Questions</LinkTo></li>
+      </ul>
+    </div>
+  </div>
+</footer>
