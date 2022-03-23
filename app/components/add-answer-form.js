@@ -16,7 +16,7 @@ export default class AddAnswerFormComponent extends Component {
     let isValid = !isEmpty(description);
     if (isValid) {
       this.args.addAnswer({
-        id: Math.floor(Math.random() * 100),
+        id: Math.random(36).toString().substring(2, 9),
         questionId: this.questionId,
         description,
         createdAt: new Date(),
