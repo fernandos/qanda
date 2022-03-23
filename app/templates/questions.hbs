@@ -1,4 +1,6 @@
 {{page-title "Questions"}}
 <h3 class="mb-3">Questions List</h3>
-<QuestionsList @questions={{@model.questions}} />
+<div class="mb-3">
+  <QuestionsList @questions={{@model.questions}} />
+</div>
 <AddQuestionForm @addQuestion={{this.addQuestion}} />

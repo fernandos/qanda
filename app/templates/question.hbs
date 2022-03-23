@@ -1,4 +1,14 @@
 {{page-title "Question"}}
-<h4>Question {{@model.id}}</h4>
-<QuestionDetail @questionId={{@model.id}} @answers={{@model.answers}} />
-<AddAnswerForm @questionId={{@model.id}} @addAnswer={{this.addAnswer}} />
+<div class="shadow p-3 mb-5 bg-body rounded">
+  <h4>Q: {{@model.question.title}}</h4>
+  <p class="shadow-none p-3 mb-5 bg-light rounded">{{@model.question.description}}</p>
+</div>
+
+<div class="mb-3">
+  <AnswersList
+    @questionId={{@model.id}}
+    @answers={{@model.answers}} />
+</div>
+<AddAnswerForm
+  @questionId={{@model.id}}
+  @addAnswer={{this.addAnswer}} />

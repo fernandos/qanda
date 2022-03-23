@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
-export default class QuestionDetailComponent extends Component {
+export default class AnswersListComponent extends Component {
   get questionId() {
     return this.args.questionId;
   }
