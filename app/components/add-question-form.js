@@ -14,7 +14,7 @@ export default class AddQuestionFormComponent extends Component {
 
     if (isValid) {
       this.args.addQuestion({
-        id: Math.floor(Math.random() * 100),
+        id: Math.random(36).toString().substring(2, 9),
         title,
         description,
         answersCount: 0,
