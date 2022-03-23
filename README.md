@@ -1,7 +1,6 @@
-# qanda
+# Qanda
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This challenge is to build a website where a user can ask questions and others be able to reply with answers.
 
 ## Prerequisites
 
