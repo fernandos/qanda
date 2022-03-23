@@ -7,20 +7,14 @@ module('Integration | Component | question-detail', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    this.set('questionId', 1);
+    this.set('answers', []);
 
-    await render(hbs`<QuestionDetail />`);
+    await render(hbs`<QuestionDetail
+      @questionId={{this.questionId}}
+      @answers={{this.answers}}
+      />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <QuestionDetail>
-        template block text
-      </QuestionDetail>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).exists();
   });
 });

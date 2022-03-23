@@ -2,6 +2,7 @@
   <div class="col-sm-4">
     <label for="description">Your Answer</label>
     <Input
+      id="description"
       class="form-control"
       @value={{this.description}} />
   </div>
@@ -13,3 +14,6 @@
       {{on "click" this.addAnswer}} />
   </div>
 </div>
+{{#if this.invalidForm}}
+  <span>Error</span>
+{{/if}}

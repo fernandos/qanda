@@ -3,3 +3,6 @@
   <form.element @controlType="textarea" @label="Description" @property="description" />
   <form.submitButton>Ask Question</form.submitButton>
 </BsForm>
+{{#if this.invalidForm}}
+  <span>Error</span>
+{{/if}}

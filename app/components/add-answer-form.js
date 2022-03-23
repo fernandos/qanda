@@ -1,13 +1,15 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { isEmpty } from '@ember/utils';
-import { alias } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
-
 export default class AddAnswerFormComponent extends Component {
   @service store;
-  @alias('args.questionId') questionId;
+  @tracked invalidForm = false;
+  get questionId() {
+    return this.args.questionId;
+  }
+
   @action
   addAnswer() {
     let { description } = this;
@@ -19,7 +21,9 @@ export default class AddAnswerFormComponent extends Component {
         description,
         createdAt: new Date(),
       });
+      this.invalidForm = false;
     } else {
+      this.invalidForm = true;
     }
   }
 }
