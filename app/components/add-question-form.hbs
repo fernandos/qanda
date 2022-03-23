@@ -1,8 +1,29 @@
-<BsForm @formLayout="vertical" @label="Ask Question" @onSubmit={{this.addQuestion}} as |form|>
-  <form.element @controlType="text" @label="Title" @placeholder="Title" @property="title" />
-  <form.element @controlType="textarea" @label="Description" @property="description" />
-  <form.submitButton>Ask Question</form.submitButton>
-</BsForm>
-{{#if this.invalidForm}}
-  <span>Error</span>
-{{/if}}
+<form class="col-lg-6 col-sm-12" novalidate>
+  <div class="mb-3">
+    <Input
+      id="title"
+      @type="text"
+      class="form-control {{if this.invalidTitle "is-invalid"}}"
+      placeholder="Add a Title"
+      @value={{this.title}} />
+    {{#if this.invalidTitle}}
+      <div class="invalid-feedback">
+        Please enter a Title.
+      </div>
+    {{/if}}
+    </div>
+  <div class="mb-3">
+    <Textarea
+      id="description"
+      placeholder="Add a Description"
+      class="form-control {{if this.invalidDescription "is-invalid"}}"
+      @value={{this.description}} >
+    </Textarea>
+    {{#if this.invalidDescription}}
+      <div class="invalid-feedback">
+        Please enter a Description.
+      </div>
+    {{/if}}
+  </div>
+  <button type="button" class="btn btn-primary" {{on "click" this.addQuestion}}>Ask a question</button>
+</form>

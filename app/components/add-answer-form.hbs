@@ -1,19 +1,16 @@
-<div class="row form-group">
-  <div class="col-sm-4">
-    <label for="description">Your Answer</label>
-    <Input
+<form class="col-lg-6 col-sm-12" novalidate>
+  <div class="mb-3">
+    <Textarea
       id="description"
-      class="form-control"
-      @value={{this.description}} />
+      placeholder="Your Answer"
+      class="form-control {{if this.invalidForm "is-invalid"}}"
+      @value={{this.description}} >
+    </Textarea>
+    {{#if this.invalidForm}}
+      <div class="invalid-feedback">
+        Please enter a answer in the textarea.
+      </div>
+    {{/if}}
   </div>
-  <div class="col-sm-4">
-    <BsButton
-      class="btn btn-secondary"
-      @type="submit"
-      @defaultText="Post Your Answer"
-      {{on "click" this.addAnswer}} />
-  </div>
-</div>
-{{#if this.invalidForm}}
-  <span>Error</span>
-{{/if}}
+  <button type="button" class="btn btn-primary" {{on "click" this.addAnswer}}>Post Your Answer</button>
+</form>
