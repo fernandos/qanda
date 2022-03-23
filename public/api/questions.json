@@ -2,24 +2,24 @@
   "questions": [
     {
       "id": "1",
-      "title": "Emberjs",
-      "description": "Starting ember server",
-      "answersCount": "3",
-      "createdAt": "2022-03-22T13:00:00.010+02:00"
+      "title": "Ember data and RestAdapter",
+      "description": "I'm building an ember application with a RESTAdapter to access my data in an api. I'm using the latest version of ember-data from https://github.com/emberjs/data/downloads. … This is how I'm declaring my RESTAdatpter- App.ApplicationAdapter = DS.RESTAdapter.extend({ host: 'http://example.com' }); but I dont think it's declared correctly as the ember inspector in the",
+      "answersCount": "1",
+      "createdAt": "12/10/2022"
     },
     {
       "id": "2",
-      "title": "Reactjs",
-      "description": "Custom Hooks",
-      "answersCount": "4",
-      "createdAt": "2022-03-22T13:00:00.010+02:00"
+      "title": "Programmatically navigate using React router",
+      "description": "React Router v5.1.0 with hooks There is a new useHistory hook in React Router >5.1.0 if you are using React >16.8.0 and functional components. … onClick={handleClick}> Go home </button> ); } React Router v4 With v4 of React Router, there are three approaches that you can take to programmatic routing withi",
+      "answersCount": "1",
+      "createdAt": "07/25/2020"
     },
     {
       "id": "3",
-      "title": "Vuejs",
-      "description": "alalalaalal",
-      "answersCount": "4",
-      "createdAt": "2022-03-22T13:00:00.010+02:00"
+      "title": "VueJS conditionally add an attribute for an element",
+      "description": "In VueJS we can add or remove a DOM element using v-if: <button v-if='isRequired'>Important Button</button> but is there a way to add / remove attributes of a dom element eg for the following conditionally",
+      "answersCount": "2",
+      "createdAt": "06/15/2019"
     }
   ]
 }

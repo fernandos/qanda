@@ -13,14 +13,17 @@ export default class AddAnswerFormComponent extends Component {
 
   @action
   addAnswer() {
-    let { description } = this;
+    let { description, questionId } = this;
     let isValid = !isEmpty(description);
     if (isValid) {
+      let newId = Math.random(36).toString().substring(2, 9);
+      let today = new Date().toLocaleDateString('en-US');
+
       this.args.addAnswer({
-        id: Math.random(36).toString().substring(2, 9),
-        questionId: this.questionId,
+        id: newId,
+        questionId,
         description,
-        createdAt: new Date(),
+        createdAt: today,
       });
       this.invalidForm = false;
       this.description = '';

@@ -17,12 +17,15 @@ export default class AddQuestionFormComponent extends Component {
     let isValidDescription = !isEmpty(description);
 
     if (isValidTitle && isValidDescription) {
+      let newId = Math.random(36).toString().substring(2, 9);
+      let today = new Date().toLocaleDateString('en-US');
+
       this.args.addQuestion({
-        id: Math.random(36).toString().substring(2, 9),
+        id: newId,
         title,
         description,
         answersCount: 0,
-        createdAt: new Date(),
+        createdAt: today,
       });
       this.invalidTitle = false;
       this.invalidDescription = false;

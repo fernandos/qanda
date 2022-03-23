@@ -8,9 +8,11 @@ export default class QuestionRoute extends Route {
 
   model(params) {
     const { id } = params;
-
     return hash({
       id,
+      question: this.store.findAll('question').then((questions) => {
+        return questions.find((item) => item.id === id);
+      }),
       answers: this.store.findAll('answer'),
     });
   }
