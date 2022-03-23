@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "experimentalDecorators": true,
+    "paths": {
+      "qanda/tests/*": [
+        "./tests/*"
+      ],
+      "qanda/*": [
+        "./app/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "vendor",
+    ".git",
+    "dist"
+  ]
+}
