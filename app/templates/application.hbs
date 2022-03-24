@@ -1,7 +1,7 @@
 {{page-title "Qanda"}}
-<header class="navbar navbar-expand-md navbar-dark">
+<header>
   <BsNavbar
-  class="container-xxl flex-wrap flex-md-nowrap"
+    class="container"
     @type="dark"
     @backgroundColor="dark"
     as |navbar|>
@@ -19,18 +19,20 @@
     </navbar.content>
   </BsNavbar>
 </header>
-<div class="container-xxl my-md-4">
-  <div class="row">
-    <main class="col-12">
-      <h1>Ask & answer questions</h1>
-      <p>In this place you can ask and answer questions about whatever you want. Others can respond to these Q&As directly. You can ask or answer questions from search on any device.</p>
-      {{outlet}}
-    </main>
+<main class="flex-shrink-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Ask & answer questions</h1>
+        <p>In this place you can ask and answer questions about whatever you want. Others can respond to these Q&As directly. You can ask or answer questions from search on any device.</p>
+        {{outlet}}
+      </div>
+    </div>
   </div>
-</div>
-<footer class="footer d-none d-lg-block">
-  <div class="container-xxl">
-    <div class="d-flex flex-wrap justify-content-between align-items-center p-0 m-0 border-top">
+</main>
+<footer class="footer mt-auto">
+  <div class="container">
+    <div class="py-3 d-flex flex-wrap justify-content-between align-items-center border-top">
       <p class="col-md-4 mb-0 text-muted">© 2022 Ember Challenge</p>
       <ul class="nav col-md-4 justify-content-end">
         <li class="px-4 nav-item"><LinkTo class="nav-link p-0 text-muted" @route="index">Home</LinkTo></li>
